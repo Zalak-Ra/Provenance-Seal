@@ -1,0 +1,17 @@
+node_modules/
+backend/node_modules/
+frontend/node_modules/
+build/
+dist/
+frontend/dist/
+coverage/
+.env
+backend/.env
+frontend/.env
+deployment.json
+frontend/public/deployment.json
+frontend/public/abi/
+backend/data/
+*.log
+.DS_Store
+Thumbs.db

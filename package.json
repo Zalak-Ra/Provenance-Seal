@@ -1,0 +1,23 @@
+{
+  "name": "fake-product-blockchain",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Ethereum product registration, custody transfer, and QR verification records.",
+  "scripts": {
+    "bootstrap": "npm install && npm install --prefix backend && npm install --prefix frontend",
+    "ganache": "ganache --wallet.deterministic --wallet.totalAccounts 10 --server.port 8545 --chain.chainId 1337 --chain.networkId 1337",
+    "compile": "truffle compile && node scripts/sync-abi.js",
+    "test": "truffle test",
+    "test:backend": "npm test --prefix backend",
+    "test:frontend": "npm test --prefix frontend",
+    "test:integration": "node scripts/integration-flow.mjs",
+    "migrate": "truffle migrate --network development --reset && node scripts/sync-abi.js",
+    "backend": "npm start --prefix backend",
+    "frontend": "npm run dev --prefix frontend"
+  },
+  "devDependencies": {
+    "ethers": "^6.13.5",
+    "ganache": "7.9.2",
+    "truffle": "5.11.5"
+  }
+}
